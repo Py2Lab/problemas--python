@@ -5,6 +5,10 @@ def imprimir_hola_mundo():
     
 #2. Guardar en una variable la cadena HOLA MUNDO e imprimirla
 
+
+
+
+
 def imprimir_hola_mundo_2():
     #variable cadena
     cadena = "HOLA MUNDO"
