@@ -50,11 +50,40 @@ def imprime_diez(numero: int) -> None:
 # 1 x 2 = 2
 # .........
 # 1 x 10 = 10
-
 def tabla_multiplicar(numero: int) -> None:
     i: int = 1
     while( i <= 10):
         print(str(numero) + " x " + str(i) + " = " + str(numero*i))
         i = i + 1
 
+#Esribir una duncion que se le pase una lista de numeros y los invierta
+#Ej:
+#reversa_lista([1,2,3,4,5]) -> [5,4,3,2,1]
+def reversa_lista(lista: list) -> list:
+    lista_inveritda: list = []
+    indice: int = len(lista) - 1
+    while(indice >= 0):
+        lista_inveritda.append(lista[indice])
+        indice = indice - 1
+    return lista_inveritda
 
+#Escribir una funcion que nos diga si una palabra es palindroma o no 
+#Una palabra es palindromo si se lee igual de derecha a izquierda que de izquierda a derecha
+def es_palindromo(palabra: str) -> bool:
+    #ej
+    #palabra = "ana"
+    #abc .... list("abc") -> ["a","n","a"]
+    #si aplicamos reversa nos da ["a","n","a"]
+    lista_de_letras: list = list(palabra)
+    if(lista_de_letras == reversa_lista(list(palabra))):
+        return True
+    else:
+        return False
+
+#Crear una funcion que devuelva la suma de los numero de una lista
+#ej: [1,2,3] -> 6
+def suma_elementos_lista(lista_numeros: list) -> float:
+    suma_acumulada: float = float(0)
+    for numero in lista_numeros:
+        suma_acumulada = numero + suma_acumulada
+    return suma_acumulada
